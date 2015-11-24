@@ -40,11 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainModel\DomainModelAbout.cs" />
+    <Compile Include="DomainModel\DomainModelBoard.cs" />
+    <Compile Include="DomainModel\DomainModelContacts.cs" />
+    <Compile Include="DomainModel\DomainModelNews.cs" />
+    <Compile Include="DomainModel\DomainModelSponser.cs" />
+    <Compile Include="DomainModel\DomainModelTeam.cs" />
+    <Compile Include="DomainModel\DomainModelTurnament.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Context\" />
-    <Folder Include="DomainModel\" />
     <Folder Include="Repository\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
