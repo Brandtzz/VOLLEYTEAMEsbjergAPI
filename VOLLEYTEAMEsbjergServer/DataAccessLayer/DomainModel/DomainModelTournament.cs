@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.DomainModel
 {
-   public class DomainModelSponser
+    public class DomainModelTournament
     {
-       public int Id { get; set; }
-       public String Sponser { get; set; }
+        public int Id { get; set; }
+        public String Tournament { get; set; }
     }
 }

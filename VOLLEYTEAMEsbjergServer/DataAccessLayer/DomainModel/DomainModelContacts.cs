@@ -9,7 +9,7 @@ namespace DataAccessLayer.DomainModel
    public class DomainModelContacts
     {
        public int Id { get; set; }
-       public String Conteacts { get; set; }
+       public String Contacts { get; set; }
 
     }
 }

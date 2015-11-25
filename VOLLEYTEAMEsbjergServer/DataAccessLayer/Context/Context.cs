@@ -37,20 +37,20 @@ namespace DataAccessLayer.Context
 
             base.OnModelCreating(modelbuilder);
             var contactsConfig = modelbuilder.Entity<DomainModelContacts>();
-            contactsConfig.Property(domainModelContacts => domainModelContacts.Conteacts).HasColumnType("NVARCHAR").HasMaxLength(2100);
+            contactsConfig.Property(domainModelContacts => domainModelContacts.Contacts).HasColumnType("NVARCHAR").HasMaxLength(2100);
             contactsConfig.ToTable("Contacts");
 
             base.OnModelCreating(modelbuilder);
-            var sponserConfig = modelbuilder.Entity<DomainModelSponser>();
-            sponserConfig.Property(domainModelSponser => domainModelSponser.Sponser).HasColumnType("NVARCHAR").HasMaxLength(2100);
-            sponserConfig.ToTable("Sponser");
+            var sponsorConfig = modelbuilder.Entity<DomainModelSponsor>();
+            sponsorConfig.Property(domainModelSponsor => domainModelSponsor.Sponsor).HasColumnType("NVARCHAR").HasMaxLength(2100);
+            sponsorConfig.ToTable("Sponsor");
 
             base.OnModelCreating(modelbuilder);
-            var turnamentConfig = modelbuilder.Entity<DomainModelTurnament>();
-            turnamentConfig.Property(domainModelTurnament => domainModelTurnament.Turnament)
+            var tournamentConfig = modelbuilder.Entity<DomainModelTournament>();
+            tournamentConfig.Property(domainModelTournament => domainModelTournament.Tournament)
                 .HasColumnType("NVARCHAR")
                 .HasMaxLength(2100);
-            turnamentConfig.ToTable("Turnament");
+            tournamentConfig.ToTable("Tournament");
 
             base.OnModelCreating(modelbuilder);
             var teamConfig = modelbuilder.Entity<DomainModelTeam>();
@@ -59,11 +59,11 @@ namespace DataAccessLayer.Context
         }
 
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelTeam> Team { get; set; }
-        public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelTurnament> Turnament { get; set; }
+        public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelTournament> Turnament { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelAbout> About { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelBoard> Board { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelContacts> Contacts { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelNews> News { get; set; }
-        public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelSponser> Sponser { get; set; }
+        public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelSponsor> Sponser { get; set; }
     }
 }
