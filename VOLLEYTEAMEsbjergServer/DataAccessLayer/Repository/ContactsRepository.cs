@@ -7,7 +7,7 @@ using DataAccessLayer.DomainModel;
 
 namespace DataAccessLayer.Repository
 {
-    class ContactsRepository : ICrud<DomainModelContacts>
+    public class ContactsRepository : ICrud<DomainModelContacts>
     {
         public List<DomainModelContacts> ReadAll()
         {
