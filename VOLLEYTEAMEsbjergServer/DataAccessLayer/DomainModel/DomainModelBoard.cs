@@ -8,8 +8,8 @@ namespace DataAccessLayer.DomainModel
 {
     public class DomainModelBoard
     {
-        public int ID { get; set; }
-        public String Board { get; set; }  
+        public int Id { get; set; }
+        public string Board { get; set; }  
 
     }
 }

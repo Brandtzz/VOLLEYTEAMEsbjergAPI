@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.DomainModel
+namespace DataTransferObjects.DTO
 {
-    public class DomainModelTournament
+    public class TournamentDto
     {
         public int Id { get; set; }
+
         public string Tournament { get; set; }
     }
 }

@@ -9,6 +9,6 @@ namespace DataAccessLayer.DomainModel
    public class DomainModelSponsor
     {
        public int Id { get; set; }
-       public String Sponsor { get; set; }
+       public string Sponsor { get; set; }
     }
 }

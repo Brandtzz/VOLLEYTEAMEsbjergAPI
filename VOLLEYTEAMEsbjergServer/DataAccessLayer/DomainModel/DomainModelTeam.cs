@@ -9,6 +9,6 @@ namespace DataAccessLayer.DomainModel
    public  class DomainModelTeam
     {
        public int  Id{ get; set; }
-       public String Team { get; set; }
+       public string Team { get; set; }
     }
 }
