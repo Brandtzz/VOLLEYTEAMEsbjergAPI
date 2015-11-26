@@ -9,6 +9,6 @@ namespace DataAccessLayer.DomainModel
    public  class DomainModelNews
     {
        public int Id{ get; set; }
-       public String News { get; set; }    
+       public string News { get; set; }    
     }
 }
