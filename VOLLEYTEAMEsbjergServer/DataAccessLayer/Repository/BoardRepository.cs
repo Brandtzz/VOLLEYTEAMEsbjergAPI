@@ -24,7 +24,7 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
                 board =
-                    context.Set<DomainModelBoard>().Where(domainModelBoard => domainModelBoard.ID == Id).FirstOrDefault();
+                    context.Set<DomainModelBoard>().Where(domainModelBoard => domainModelBoard.Id == Id).FirstOrDefault();
             }
             return board;
         }
@@ -43,7 +43,7 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
                 DomainModelBoard board =
-                    context.Set<DomainModelBoard>().Where(domainModelBoard => domainModelBoard.ID == Id).FirstOrDefault();
+                    context.Set<DomainModelBoard>().Where(domainModelBoard => domainModelBoard.Id == Id).FirstOrDefault();
                 if (board != null)
                 {
                     context.Set<DomainModelBoard>().Remove(board);
@@ -58,7 +58,7 @@ namespace DataAccessLayer.Repository
             {
                 DomainModelBoard board =
                     context.Set<DomainModelBoard>()
-                        .Where(domainModelBoard => domainModelBoard.ID == entity.ID)
+                        .Where(domainModelBoard => domainModelBoard.Id == entity.Id)
                         .FirstOrDefault();
                 if (board != null)
                 {
