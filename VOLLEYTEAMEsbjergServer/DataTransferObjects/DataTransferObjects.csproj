@@ -40,6 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\AboutDtoConverter.cs" />
+    <Compile Include="Converters\AbstractDtoConverter.cs" />
+    <Compile Include="Converters\BoardDtoConverter.cs" />
+    <Compile Include="Converters\ContactsDtoConverter.cs" />
+    <Compile Include="Converters\NewsDtoConverter.cs" />
+    <Compile Include="Converters\SponsorDtoConverter.cs" />
+    <Compile Include="Converters\TeamDtoConverter.cs" />
+    <Compile Include="Converters\TournamentDtoConverter.cs" />
     <Compile Include="DTO\AboutDto.cs" />
     <Compile Include="DTO\BoardDto.cs" />
     <Compile Include="DTO\ContactsDto.cs" />
@@ -48,6 +56,12 @@
     <Compile Include="DTO\TeamDto.cs" />
     <Compile Include="DTO\TournamentDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{2a9b90b6-a737-4685-a3b1-b11e7a98a842}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
