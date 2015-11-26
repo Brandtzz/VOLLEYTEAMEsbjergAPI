@@ -207,7 +207,13 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AboutApiController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BoardApiController.cs" />
+    <Compile Include="Controllers\ContactsApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsApiController.cs" />
+    <Compile Include="Controllers\SponsorApiController.cs" />
+    <Compile Include="Controllers\TeamApiController.cs" />
+    <Compile Include="Controllers\TournamentApiController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -292,6 +298,10 @@
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
       <Project>{2a9b90b6-a737-4685-a3b1-b11e7a98a842}</Project>
       <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataTransferObjects\DataTransferObjects.csproj">
+      <Project>{765b5ae9-2f40-4d5a-bfeb-1fae4bdee6c2}</Project>
+      <Name>DataTransferObjects</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

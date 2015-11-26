@@ -7,7 +7,7 @@ using DataAccessLayer.Repository;
 
 namespace DataAccessLayer
 {
-    class Facade
+    public class Facade
     {
         private AboutRepository aboutRepository;
         private BoardRepository boardRepository;

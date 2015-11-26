@@ -7,7 +7,7 @@ using DataAccessLayer.DomainModel;
 
 namespace DataAccessLayer.Repository
 {
-    class TournamentRepository:ICrud<DomainModelTournament>
+    public class TournamentRepository:ICrud<DomainModelTournament>
     {
         public List<DomainModelTournament> ReadAll()
         {

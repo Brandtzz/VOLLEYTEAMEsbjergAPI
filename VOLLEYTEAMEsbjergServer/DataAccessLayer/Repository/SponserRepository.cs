@@ -7,7 +7,7 @@ using DataAccessLayer.DomainModel;
 
 namespace DataAccessLayer.Repository
 {
-    class SponserRepository:ICrud<DomainModelSponsor>
+    public class SponserRepository:ICrud<DomainModelSponsor>
     {
         public List<DomainModelSponsor> ReadAll()
         {

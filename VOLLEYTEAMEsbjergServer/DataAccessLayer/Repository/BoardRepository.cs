@@ -7,7 +7,7 @@ using DataAccessLayer.DomainModel;
 
 namespace DataAccessLayer.Repository
 {
-    class BoardRepository:ICrud<DomainModelBoard>
+    public class BoardRepository:ICrud<DomainModelBoard>
     {
         public List<DomainModelBoard> ReadAll()
         {
