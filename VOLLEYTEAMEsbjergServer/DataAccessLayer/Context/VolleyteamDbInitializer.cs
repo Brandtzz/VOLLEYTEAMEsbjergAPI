@@ -8,7 +8,7 @@ using DataAccessLayer.DomainModel;
 
 namespace DataAccessLayer.Context
 {
-    class VolleyteamDbInitializer : DropCreateDatabaseAlways<Context>
+    class VOLLEYTEAMDbInitializer : DropCreateDatabaseAlways<Context>
     {
         protected override void Seed(Context context)
         {
