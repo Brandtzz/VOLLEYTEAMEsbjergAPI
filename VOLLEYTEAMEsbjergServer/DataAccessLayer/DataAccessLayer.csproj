@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\Context.cs" />
+    <Compile Include="Context\VolleyteamDbInitializer.cs" />
     <Compile Include="DomainModel\DomainModelAbout.cs" />
     <Compile Include="DomainModel\DomainModelBoard.cs" />
     <Compile Include="DomainModel\DomainModelContacts.cs" />
