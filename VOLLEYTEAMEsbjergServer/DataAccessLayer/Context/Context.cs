@@ -15,7 +15,7 @@ namespace DataAccessLayer.Context
 
         public Context() : base("VOLLEYTEAMEsbjerg")
         {
-            Database.SetInitializer(new VolleyteamDbInitializer());
+            Database.SetInitializer(new VOLLEYTEAMDbInitializer());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelbuilder)
