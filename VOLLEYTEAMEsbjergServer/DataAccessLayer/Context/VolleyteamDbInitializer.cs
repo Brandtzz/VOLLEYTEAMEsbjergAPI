@@ -19,7 +19,7 @@ namespace DataAccessLayer.Context
 
             var board = new DomainModelBoard
             {
-                Board = "Bestyrelsen består af: Judith, Kenneth and Per"
+                Board = "Bestyrelsen består af: Judith, Kenneth, Tina og Per"
             };
 
             var contacts = new DomainModelContacts
