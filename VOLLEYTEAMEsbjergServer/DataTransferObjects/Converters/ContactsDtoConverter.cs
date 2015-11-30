@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer.DomainModel;
 
-namespace DataTransferObjects.DTO
+namespace DataTransferObjects.Converters
 {
     public class ContactsDtoConverter : AbstractDtoConverter<DomainModelContacts, ContactsDto>
     {

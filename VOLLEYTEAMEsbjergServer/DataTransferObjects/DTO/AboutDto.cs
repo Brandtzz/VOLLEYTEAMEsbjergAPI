@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataTransferObjects.DTO
+namespace DataTransferObjects.Converters
 {
     public class AboutDto
     {
