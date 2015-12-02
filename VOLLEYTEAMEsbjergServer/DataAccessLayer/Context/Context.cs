@@ -8,7 +8,7 @@ using DataAccessLayer.DomainModel;
 
 namespace DataAccessLayer.Context
 {
-    public class Context:DbContext
+    public class Context : DbContext
 
     {
        
@@ -56,6 +56,11 @@ namespace DataAccessLayer.Context
             var teamConfig = modelbuilder.Entity<DomainModelTeam>();
             teamConfig.Property(domainModelTeam => domainModelTeam.Team).HasColumnType("NVARCHAR").HasMaxLength(2100);
             teamConfig.ToTable("Team");
+
+            base.OnModelCreating(modelbuilder);
+            var pictureConfig = modelbuilder.Entity<DomainModelPicture>();
+            pictureConfig.Property(domainModelPicture => domainModelPicture.Picture).HasColumnType("Image").HasColumnType("NVARCHAR").HasMaxLength(200);
+            teamConfig.ToTable("Picture");
         }
 
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelTeam> Team { get; set; }
@@ -65,5 +70,6 @@ namespace DataAccessLayer.Context
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelContacts> Contacts { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelNews> News { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelSponsor> Sponsor { get; set; }
+        public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelPicture> Picture { get; set; } 
     }
 }
