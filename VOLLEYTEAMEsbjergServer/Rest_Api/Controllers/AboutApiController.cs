@@ -1,9 +1,5 @@
 ﻿using DataTransferObjects.Converters;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using DataAccessLayer;
 using DataAccessLayer.DomainModel;
@@ -12,8 +8,6 @@ namespace Rest_Api.Controllers
 {
     public class AboutApiController : ApiController
     {
-        Facade facade = new Facade();  
-
         // GET: api/AboutApi
         public IEnumerable<AboutDto> GetAbouts()
         {
