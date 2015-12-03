@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Configuration;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +14,7 @@ namespace DataAccessLayer.Context
     public class Context : DbContext
 
     {
-       
+
 
         public Context() : base("VOLLEYTEAMEsbjerg")
         {
@@ -59,7 +62,7 @@ namespace DataAccessLayer.Context
 
             base.OnModelCreating(modelbuilder);
             var pictureConfig = modelbuilder.Entity<DomainModelPicture>();
-            pictureConfig.Property(domainModelPicture => domainModelPicture.Picture).HasColumnType("Image").HasColumnType("NVARCHAR").HasMaxLength(200);
+            pictureConfig.Property(domainModelPicture => domainModelPicture.PictureName).HasColumnType("NVARCHAR").HasColumnType("image").IsRequired();
             teamConfig.ToTable("Picture");
         }
 
@@ -70,6 +73,6 @@ namespace DataAccessLayer.Context
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelContacts> Contacts { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelNews> News { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelSponsor> Sponsor { get; set; }
-        public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelPicture> Picture { get; set; } 
+        public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelPicture> Picture { get; set; }
     }
 }
