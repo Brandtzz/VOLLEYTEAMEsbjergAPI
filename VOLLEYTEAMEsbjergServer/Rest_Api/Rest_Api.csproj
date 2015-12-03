@@ -211,6 +211,7 @@
     <Compile Include="Controllers\ContactsApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsApiController.cs" />
+    <Compile Include="Controllers\PictureApiController.cs" />
     <Compile Include="Controllers\SponsorApiController.cs" />
     <Compile Include="Controllers\TeamApiController.cs" />
     <Compile Include="Controllers\TournamentApiController.cs" />
@@ -285,6 +286,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\PictureApi\" />
+    <Folder Include="Views\Picture\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

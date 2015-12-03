@@ -62,7 +62,7 @@ namespace DataAccessLayer.Context
 
             base.OnModelCreating(modelbuilder);
             var pictureConfig = modelbuilder.Entity<DomainModelPicture>();
-            pictureConfig.Property(domainModelPicture => domainModelPicture.PictureName).HasColumnType("NVARCHAR").HasColumnType("image").IsRequired();
+            pictureConfig.Property(domainModelPicture => domainModelPicture.PictureName).HasColumnType("NVARCHAR").HasMaxLength(200).HasColumnType("image").IsRequired();
             teamConfig.ToTable("Picture");
         }
 
