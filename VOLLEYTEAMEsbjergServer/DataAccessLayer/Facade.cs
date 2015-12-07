@@ -16,6 +16,7 @@ namespace DataAccessLayer
         private SponserRepository sponsorRepository;
         private TeamRepository teamRepository;
         private TournamentRepository tournamentRepository;
+        private EnglishRepository englishRepository; 
 
 
         public AboutRepository GetAboutRepository()
@@ -79,6 +80,16 @@ namespace DataAccessLayer
                 tournamentRepository = new TournamentRepository();
             }
             return tournamentRepository;
+        }
+
+        public EnglishRepository GetEnglishRepository()
+        {
+            if (englishRepository == null)
+            {
+                englishRepository = new EnglishRepository();
+            }
+            return englishRepository; 
+           
         }
     }
 }

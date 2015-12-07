@@ -56,6 +56,11 @@ namespace DataAccessLayer.Context
             var teamConfig = modelbuilder.Entity<DomainModelTeam>();
             teamConfig.Property(domainModelTeam => domainModelTeam.Team).HasColumnType("NVARCHAR").HasMaxLength(2100);
             teamConfig.ToTable("Team");
+
+            base.OnModelCreating(modelbuilder);
+            var englishConfig = modelbuilder.Entity<DomainModelEnglish>();
+            englishConfig.Property(DomainModelEnglish => DomainModelEnglish.English).HasColumnType("NVARCHAR").HasMaxLength(2100);
+            englishConfig.ToTable("English");
         }
 
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelTeam> Team { get; set; }
@@ -65,5 +70,6 @@ namespace DataAccessLayer.Context
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelContacts> Contacts { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelNews> News { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelSponsor> Sponsor { get; set; }
+        public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelEnglish> English { get; set; }
     }
 }
