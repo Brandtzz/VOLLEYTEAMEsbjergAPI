@@ -57,6 +57,11 @@ namespace DataAccessLayer.Context
                              "Turneringsplan for Kids/teen volley: "
             };
 
+            var english = new DomainModelEnglish
+            {
+                English = "Welcome to VOLLEYTEAMESBJERG........GOOGLE TRANSLATE FTW!!!!!!!"
+            };
+
             Bitmap bitmapLogo = new Bitmap(Resources.logo);
 
             var picture = new DomainModelPicture
@@ -72,6 +77,7 @@ namespace DataAccessLayer.Context
             context.Sponsor.Add(sponsor);
             context.Team.Add(team);
             context.Tournament.Add(tournament);
+            context.English.Add(english);
             context.Picture.Add(picture);
             base.Seed(context);
         }
