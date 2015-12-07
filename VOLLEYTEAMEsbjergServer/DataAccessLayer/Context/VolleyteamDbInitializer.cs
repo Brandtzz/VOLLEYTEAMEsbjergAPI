@@ -1,10 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Mime;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer.DomainModel;
+using DataAccessLayer.Properties;
+using System.ComponentModel;
 
 namespace DataAccessLayer.Context
 {
@@ -51,6 +57,14 @@ namespace DataAccessLayer.Context
                              "Turneringsplan for Kids/teen volley: "
             };
 
+            Bitmap bitmapLogo = new Bitmap(Resources.logo);
+
+            var picture = new DomainModelPicture
+            {
+                PictureName = "VOLLEYTEAM Esbjerg Logo",
+                Picture = bitmapLogo
+            };
+
             context.About.Add(about);
             context.Board.Add(board);
             context.Contacts.Add(contacts);
@@ -58,6 +72,7 @@ namespace DataAccessLayer.Context
             context.Sponsor.Add(sponsor);
             context.Team.Add(team);
             context.Tournament.Add(tournament);
+            context.Picture.Add(picture);
             base.Seed(context);
         }
     }

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Configuration;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +11,10 @@ using DataAccessLayer.DomainModel;
 
 namespace DataAccessLayer.Context
 {
-    public class Context:DbContext
+    public class Context : DbContext
 
     {
-       
+
 
         public Context() : base("VOLLEYTEAMEsbjerg")
         {
@@ -61,6 +64,12 @@ namespace DataAccessLayer.Context
             var englishConfig = modelbuilder.Entity<DomainModelEnglish>();
             englishConfig.Property(DomainModelEnglish => DomainModelEnglish.English).HasColumnType("NVARCHAR").HasMaxLength(2100);
             englishConfig.ToTable("English");
+
+            base.OnModelCreating(modelbuilder);
+            var pictureConfig = modelbuilder.Entity<DomainModelPicture>();
+            pictureConfig.Property(domainModelPicture => domainModelPicture.PictureName).HasColumnType("NVARCHAR").HasMaxLength(200).HasColumnType("image").IsRequired();
+            teamConfig.ToTable("Picture");
+
         }
 
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelTeam> Team { get; set; }
@@ -71,5 +80,6 @@ namespace DataAccessLayer.Context
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelNews> News { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelSponsor> Sponsor { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelEnglish> English { get; set; }
+        public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelPicture> Picture { get; set; }
     }
 }
