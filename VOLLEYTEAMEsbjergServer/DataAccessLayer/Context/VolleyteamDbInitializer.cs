@@ -62,13 +62,13 @@ namespace DataAccessLayer.Context
                 English = "Welcome to VOLLEYTEAMESBJERG........GOOGLE TRANSLATE FTW!!!!!!!"
             };
 
-            Bitmap bitmapLogo = new Bitmap(Resources.logo);
+            //Bitmap bitmapLogo = new Bitmap(Resources.logo);
 
-            var picture = new DomainModelPicture
-            {
-                PictureName = "VOLLEYTEAM Esbjerg Logo",
-                Picture = bitmapLogo
-            };
+            //var picture = new DomainModelPicture
+            //{
+            //    PictureName = "VOLLEYTEAM Esbjerg Logo",
+            //    Picture = bitmapLogo
+            //};
 
             context.About.Add(about);
             context.Board.Add(board);
@@ -78,7 +78,7 @@ namespace DataAccessLayer.Context
             context.Team.Add(team);
             context.Tournament.Add(tournament);
             context.English.Add(english);
-            context.Picture.Add(picture);
+            //context.Picture.Add(picture);
             base.Seed(context);
         }
     }

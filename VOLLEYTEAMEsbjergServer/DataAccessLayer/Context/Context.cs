@@ -65,10 +65,10 @@ namespace DataAccessLayer.Context
             englishConfig.Property(DomainModelEnglish => DomainModelEnglish.English).HasColumnType("NVARCHAR").HasMaxLength(2100);
             englishConfig.ToTable("English");
 
-            base.OnModelCreating(modelbuilder);
-            var pictureConfig = modelbuilder.Entity<DomainModelPicture>();
-            pictureConfig.Property(domainModelPicture => domainModelPicture.PictureName).HasColumnType("NVARCHAR").HasMaxLength(200).HasColumnType("image").IsRequired();
-            teamConfig.ToTable("Picture");
+            //base.OnModelCreating(modelbuilder);
+            //var pictureConfig = modelbuilder.Entity<DomainModelPicture>();
+            //pictureConfig.Property(domainModelPicture => domainModelPicture.PictureName).HasColumnType("NVARCHAR").HasMaxLength(200).HasColumnType("image").IsRequired();
+            //teamConfig.ToTable("Picture");
 
         }
 
@@ -80,6 +80,6 @@ namespace DataAccessLayer.Context
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelNews> News { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelSponsor> Sponsor { get; set; }
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelEnglish> English { get; set; }
-        public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelPicture> Picture { get; set; }
+        //public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelPicture> Picture { get; set; }
     }
 }
