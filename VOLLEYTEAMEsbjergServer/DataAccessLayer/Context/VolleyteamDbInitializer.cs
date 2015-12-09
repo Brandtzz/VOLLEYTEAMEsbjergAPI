@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Net.Mime;
 using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer.DomainModel;
 using DataAccessLayer.Properties;
 using System.ComponentModel;
+using DataAccessLayer.Helpers;
 
 namespace DataAccessLayer.Context
 {
-    class VOLLEYTEAMDbInitializer : DropCreateDatabaseAlways<Context>
+    public class VOLLEYTEAMDbInitializer : DropCreateDatabaseAlways<Context>
     {
         protected override void Seed(Context context)
         {
@@ -35,7 +34,7 @@ namespace DataAccessLayer.Context
 
             var news = new DomainModelNews
             {
-                News = "Splid på 1 div dameholdet - STOP Mobning kampange igangsat - Senior Mixhold stadig ubesejret!"
+                News = "Senior Mixhold stadig ubesejret!"
             };
 
             var sponsor = new DomainModelSponsor
@@ -57,12 +56,11 @@ namespace DataAccessLayer.Context
                              "Turneringsplan for Kids/teen volley: "
             };
 
-            Bitmap bitmapLogo = new Bitmap(Resources.logo);
-
             var picture = new DomainModelPicture
             {
+                Id = 1,
                 PictureName = "VOLLEYTEAM Esbjerg Logo",
-                Picture = bitmapLogo
+                Picture = HelpPictureConverter.CopyImageToByteArray(Resources.logo)
             };
 
             context.About.Add(about);

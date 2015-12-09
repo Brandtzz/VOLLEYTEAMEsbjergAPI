@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Configuration;
@@ -12,10 +13,7 @@ using DataAccessLayer.DomainModel;
 namespace DataAccessLayer.Context
 {
     public class Context : DbContext
-
     {
-
-
         public Context() : base("VOLLEYTEAMEsbjerg")
         {
             Database.SetInitializer(new VOLLEYTEAMDbInitializer());
@@ -23,47 +21,43 @@ namespace DataAccessLayer.Context
 
         protected override void OnModelCreating(DbModelBuilder modelbuilder)
         {
-            base.OnModelCreating(modelbuilder);
             var newsConfig = modelbuilder.Entity<DomainModelNews>();
             newsConfig.Property(domainModelNews => domainModelNews.News).HasColumnType("NVARCHAR").HasMaxLength(2100);
             newsConfig.ToTable("News");
 
-            base.OnModelCreating(modelbuilder);
             var aboutConfig = modelbuilder.Entity<DomainModelAbout>();
             aboutConfig.Property(domainModelAbout => domainModelAbout.About).HasColumnType("NVARCHAR").HasMaxLength(2100);
             aboutConfig.ToTable("About");
 
-            base.OnModelCreating(modelbuilder);
             var boardConfig = modelbuilder.Entity<DomainModelBoard>();
             boardConfig.Property(domainModelBoard => domainModelBoard.Board).HasColumnType("NVARCHAR").HasMaxLength(2100);
             boardConfig.ToTable("Board");
 
-            base.OnModelCreating(modelbuilder);
             var contactsConfig = modelbuilder.Entity<DomainModelContacts>();
             contactsConfig.Property(domainModelContacts => domainModelContacts.Contacts).HasColumnType("NVARCHAR").HasMaxLength(2100);
             contactsConfig.ToTable("Contacts");
 
-            base.OnModelCreating(modelbuilder);
             var sponsorConfig = modelbuilder.Entity<DomainModelSponsor>();
             sponsorConfig.Property(domainModelSponsor => domainModelSponsor.Sponsor).HasColumnType("NVARCHAR").HasMaxLength(2100);
             sponsorConfig.ToTable("Sponsor");
 
-            base.OnModelCreating(modelbuilder);
             var tournamentConfig = modelbuilder.Entity<DomainModelTournament>();
             tournamentConfig.Property(domainModelTournament => domainModelTournament.Tournament)
                 .HasColumnType("NVARCHAR")
                 .HasMaxLength(2100);
             tournamentConfig.ToTable("Tournament");
 
-            base.OnModelCreating(modelbuilder);
             var teamConfig = modelbuilder.Entity<DomainModelTeam>();
-            teamConfig.Property(domainModelTeam => domainModelTeam.Team).HasColumnType("NVARCHAR").HasMaxLength(2100);
+            teamConfig.Property(domainModelTeam => domainModelTeam.Team)
+                .HasColumnType("NVARCHAR").HasMaxLength(2100);
             teamConfig.ToTable("Team");
 
+            /* var pictureConfig = modelbuilder.Entity<DomainModelPicture>();
+            pictureConfig.Property(domainModelPicture => domainModelPicture.Picture)
+                .HasColumnType("varbinary").HasMaxLength(8000).HasColumnType("NVARCHAR").HasMaxLength(200);
+            teamConfig.ToTable("Picture");*/
             base.OnModelCreating(modelbuilder);
-            var pictureConfig = modelbuilder.Entity<DomainModelPicture>();
-            pictureConfig.Property(domainModelPicture => domainModelPicture.PictureName).HasColumnType("NVARCHAR").HasMaxLength(200).HasColumnType("image").IsRequired();
-            teamConfig.ToTable("Picture");
+
         }
 
         public System.Data.Entity.DbSet<DataAccessLayer.DomainModel.DomainModelTeam> Team { get; set; }

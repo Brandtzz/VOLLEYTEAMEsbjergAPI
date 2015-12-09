@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer.DomainModel;
+using DataAccessLayer.Helpers;
 
 namespace DataAccessLayer.Repository
 {
@@ -13,7 +17,8 @@ namespace DataAccessLayer.Repository
         {
             using (var context = new Context.Context())
             {
-                List<DomainModelPicture> pictureList = context.Set<DomainModelPicture>().ToList();
+                List<DomainModelPicture> pictureList = context.Picture.ToList();
+
                 return pictureList;
             }
         }
@@ -23,8 +28,7 @@ namespace DataAccessLayer.Repository
             DomainModelPicture picture = null;
             using (var context = new Context.Context())
             {
-                picture =
-                    context.Set<DomainModelPicture>().Where(DomainModelPicture => DomainModelPicture.Id == Id).FirstOrDefault();
+                picture = context.Picture.Where(DomainModelPicture => DomainModelPicture.Id == Id).FirstOrDefault();
             }
             return picture;
         }
@@ -42,7 +46,7 @@ namespace DataAccessLayer.Repository
         {
             using (var context = new Context.Context())
             {
-                DomainModelPicture picture = 
+                DomainModelPicture picture =
                     context.Set<DomainModelPicture>().Where(DomainModelPicture => DomainModelPicture.Id == Id).FirstOrDefault();
                 if (picture != null)
                 {

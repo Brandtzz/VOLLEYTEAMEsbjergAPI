@@ -15,7 +15,7 @@ namespace DataTransferObjects.Converters
             var dto = new PictureDto()
             {
                 Id = domainModelPicture.Id,
-                Picture = domainModelPicture.Picture,
+                //Picture = 
                 PictureName = domainModelPicture.PictureName
             };
             return dto;

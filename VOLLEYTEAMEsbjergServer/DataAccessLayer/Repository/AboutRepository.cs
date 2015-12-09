@@ -57,9 +57,7 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
                 DomainModelAbout about =
-                    context.Set<DomainModelAbout>()
-                        .Where(domainModelAbout => domainModelAbout.Id == entity.Id)
-                        .FirstOrDefault();
+                    context.Set<DomainModelAbout>().Where(domainModelAbout => domainModelAbout.Id == entity.Id).FirstOrDefault();
                 if (about != null)
                 {
                     about.About = entity.About;
