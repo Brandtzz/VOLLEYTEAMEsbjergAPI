@@ -55,6 +55,7 @@
     <Compile Include="DomainModel\DomainModelAbout.cs" />
     <Compile Include="DomainModel\DomainModelBoard.cs" />
     <Compile Include="DomainModel\DomainModelContacts.cs" />
+    <Compile Include="DomainModel\DomainModelEnglish.cs" />
     <Compile Include="DomainModel\DomainModelNews.cs" />
     <Compile Include="DomainModel\DomainModelPicture.cs" />
     <Compile Include="DomainModel\DomainModelSponsor.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Repository\AboutRepository.cs" />
     <Compile Include="Repository\BoardRepository.cs" />
     <Compile Include="Repository\ContactsRepository.cs" />
+    <Compile Include="Repository\EnglishRepository.cs" />
     <Compile Include="Repository\ICrud.cs" />
     <Compile Include="Repository\NewsRepository.cs" />
     <Compile Include="Repository\PictureRepository.cs" />

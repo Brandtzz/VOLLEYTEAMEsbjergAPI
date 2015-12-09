@@ -32,7 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,16 +44,16 @@
     <Compile Include="Converters\AbstractDtoConverter.cs" />
     <Compile Include="Converters\BoardDtoConverter.cs" />
     <Compile Include="Converters\ContactsDtoConverter.cs" />
+    <Compile Include="Converters\EnglishDtoConverter.cs" />
     <Compile Include="Converters\NewsDtoConverter.cs" />
-    <Compile Include="Converters\PictureDtoConverter.cs" />
     <Compile Include="Converters\SponsorDtoConverter.cs" />
     <Compile Include="Converters\TeamDtoConverter.cs" />
     <Compile Include="Converters\TournamentDtoConverter.cs" />
     <Compile Include="DTO\AboutDto.cs" />
     <Compile Include="DTO\BoardDto.cs" />
     <Compile Include="DTO\ContactsDto.cs" />
+    <Compile Include="DTO\EnglishDto.cs" />
     <Compile Include="DTO\NewsDto.cs" />
-    <Compile Include="DTO\PictureDto.cs" />
     <Compile Include="DTO\SponsorDto.cs" />
     <Compile Include="DTO\TeamDto.cs" />
     <Compile Include="DTO\TournamentDto.cs" />
