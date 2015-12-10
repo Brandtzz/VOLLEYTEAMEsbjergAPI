@@ -46,6 +46,7 @@
     <Compile Include="Converters\ContactsDtoConverter.cs" />
     <Compile Include="Converters\EnglishDtoConverter.cs" />
     <Compile Include="Converters\NewsDtoConverter.cs" />
+    <Compile Include="Converters\PictureDtoConverter.cs" />
     <Compile Include="Converters\SponsorDtoConverter.cs" />
     <Compile Include="Converters\TeamDtoConverter.cs" />
     <Compile Include="Converters\TournamentDtoConverter.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="DTO\ContactsDto.cs" />
     <Compile Include="DTO\EnglishDto.cs" />
     <Compile Include="DTO\NewsDto.cs" />
+    <Compile Include="DTO\PictureDto.cs" />
     <Compile Include="DTO\SponsorDto.cs" />
     <Compile Include="DTO\TeamDto.cs" />
     <Compile Include="DTO\TournamentDto.cs" />

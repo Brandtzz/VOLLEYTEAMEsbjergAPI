@@ -14,7 +14,6 @@ namespace DataAccessLayer.DomainModel
     public class DomainModelPicture
     {
         public int Id { get; set; }
-        [Column(TypeName = "image")]
         public byte[] Picture { get; set; }
         public string PictureName { get; set; }
     }

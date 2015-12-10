@@ -56,26 +56,16 @@ namespace DataAccessLayer.Context
                              "Turneringsplan for Kids/teen volley: "
             };
 
-<<<<<<< HEAD
             var picture = new DomainModelPicture
             {
-                Id = 1,
                 PictureName = "VOLLEYTEAM Esbjerg Logo",
                 Picture = HelpPictureConverter.CopyImageToByteArray(Resources.logo)
-=======
+            };
+
             var english = new DomainModelEnglish
             {
                 English = "Welcome to VOLLEYTEAMESBJERG........GOOGLE TRANSLATE FTW!!!!!!!"
->>>>>>> 824385cd0c3b87466afba8a2b8951c6f92d38b90
             };
-
-            //Bitmap bitmapLogo = new Bitmap(Resources.logo);
-
-            //var picture = new DomainModelPicture
-            //{
-            //    PictureName = "VOLLEYTEAM Esbjerg Logo",
-            //    Picture = bitmapLogo
-            //};
 
             context.About.Add(about);
             context.Board.Add(board);
@@ -85,7 +75,7 @@ namespace DataAccessLayer.Context
             context.Team.Add(team);
             context.Tournament.Add(tournament);
             context.English.Add(english);
-            //context.Picture.Add(picture);
+            context.Picture.Add(picture);
             base.Seed(context);
         }
     }

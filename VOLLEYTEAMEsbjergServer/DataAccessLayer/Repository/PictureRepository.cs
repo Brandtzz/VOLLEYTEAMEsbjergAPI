@@ -18,7 +18,6 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
                 List<DomainModelPicture> pictureList = context.Picture.ToList();
-
                 return pictureList;
             }
         }
