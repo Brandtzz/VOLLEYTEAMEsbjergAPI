@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Net.Mime;
 using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer.DomainModel;
 using DataAccessLayer.Properties;
 using System.ComponentModel;
+using DataAccessLayer.Helpers;
 
 namespace DataAccessLayer.Context
 {
-    class VOLLEYTEAMDbInitializer : DropCreateDatabaseAlways<Context>
+    public class VOLLEYTEAMDbInitializer : DropCreateDatabaseAlways<Context>
     {
         protected override void Seed(Context context)
         {
@@ -34,7 +33,11 @@ namespace DataAccessLayer.Context
 
             var news = new DomainModelNews
             {
+<<<<<<< HEAD
                 News = "1 div dameholdet - Senior Mixhold stadig ubesejret!"
+=======
+                News = "Senior Mixhold stadig ubesejret!"
+>>>>>>> b4acc99319debd48c756b6765e14ed2e0a4dd30f
             };
 
             var sponsor = new DomainModelSponsor
@@ -59,11 +62,18 @@ namespace DataAccessLayer.Context
                              "Turneringsplan for Kids/teen volley: "
             };
 
+            var picture = new DomainModelPicture
+            {
+                PictureName = "VOLLEYTEAM Esbjerg Logo",
+                Picture = HelpPictureConverter.CopyImageToByteArray(Resources.logo)
+            };
+
             var english = new DomainModelEnglish
             {
                 English = "Welcome to VOLLEYTEAMESBJERG........GOOGLE TRANSLATE FTW!!!!!!!"
             };
 
+<<<<<<< HEAD
             var role = new DomainModelRole
             {
                 Role = "Formand"
@@ -87,6 +97,8 @@ namespace DataAccessLayer.Context
             //    Picture = bitmapLogo
             //};
 
+=======
+>>>>>>> b4acc99319debd48c756b6765e14ed2e0a4dd30f
             context.About.Add(about);
             context.Contacts.Add(contacts);
             context.News.Add(news);
@@ -94,9 +106,13 @@ namespace DataAccessLayer.Context
             context.Team.Add(team);
             context.Tournament.Add(tournament);
             context.English.Add(english);
+<<<<<<< HEAD
             //context.Picture.Add(picture);
             context.Role.Add(role);
             context.Player.Add(player);
+=======
+            context.Picture.Add(picture);
+>>>>>>> b4acc99319debd48c756b6765e14ed2e0a4dd30f
             base.Seed(context);
         }
     }

@@ -13,7 +13,7 @@ namespace DataTransferObjects.DTO
     {
         public int Id { get; set; }
 
-        public Image Picture { get; set; }
+        public byte[] Picture { get; set; }
 
         public string PictureName { get; set; }
 
