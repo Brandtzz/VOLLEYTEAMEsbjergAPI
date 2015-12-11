@@ -53,11 +53,12 @@
     <Compile Include="Context\Context.cs" />
     <Compile Include="Context\VOLLEYTEAMDbInitializer.cs" />
     <Compile Include="DomainModel\DomainModelAbout.cs" />
-    <Compile Include="DomainModel\DomainModelBoard.cs" />
     <Compile Include="DomainModel\DomainModelContacts.cs" />
     <Compile Include="DomainModel\DomainModelEnglish.cs" />
     <Compile Include="DomainModel\DomainModelNews.cs" />
     <Compile Include="DomainModel\DomainModelPicture.cs" />
+    <Compile Include="DomainModel\DomainModelPlayer.cs" />
+    <Compile Include="DomainModel\DomainModelRole.cs" />
     <Compile Include="DomainModel\DomainModelSponsor.cs" />
     <Compile Include="DomainModel\DomainModelTeam.cs" />
     <Compile Include="DomainModel\DomainModelTournament.cs" />
@@ -69,7 +70,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Repository\AboutRepository.cs" />
-    <Compile Include="Repository\BoardRepository.cs" />
+    <Compile Include="Repository\PlayerRepository.cs" />
+    <Compile Include="Repository\RoleRepository.cs" />
     <Compile Include="Repository\ContactsRepository.cs" />
     <Compile Include="Repository\EnglishRepository.cs" />
     <Compile Include="Repository\ICrud.cs" />

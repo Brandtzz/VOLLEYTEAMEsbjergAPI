@@ -207,7 +207,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AboutApiController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BoardApiController.cs" />
+    <Compile Include="Controllers\PlayerApiController.cs" />
+    <Compile Include="Controllers\RoleApiController.cs" />
     <Compile Include="Controllers\ContactsApiController.cs" />
     <Compile Include="Controllers\EnglishApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

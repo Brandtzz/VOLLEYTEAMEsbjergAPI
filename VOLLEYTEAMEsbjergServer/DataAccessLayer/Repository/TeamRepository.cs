@@ -63,7 +63,9 @@ namespace DataAccessLayer.Repository
                         .FirstOrDefault();
                 if (team != null)
                 {
-                    team.Team = entity.Team;
+                    team.Name = entity.Name;
+                    team.Description = entity.Description;
+                    team.Intro = entity.Intro; 
                 }
                 context.SaveChanges();
                 return team;

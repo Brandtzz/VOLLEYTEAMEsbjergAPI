@@ -10,7 +10,7 @@ namespace DataAccessLayer
     public class Facade
     {
         private AboutRepository aboutRepository;
-        private BoardRepository boardRepository;
+        private RoleRepository roleRepository;
         private ContactsRepository contactsRepository;
         private NewsRepository newsRepository;
         private SponserRepository sponsorRepository;
@@ -18,6 +18,8 @@ namespace DataAccessLayer
         private TournamentRepository tournamentRepository;
         private EnglishRepository englishRepository; 
         private PictureRepository pictureRepository;
+        private PlayerRepository playerRepository; 
+        
 
         public AboutRepository GetAboutRepository()
         {
@@ -28,13 +30,13 @@ namespace DataAccessLayer
             return aboutRepository;
         }
 
-        public BoardRepository GetBoardRepository()
+        public RoleRepository GetRoleRepository()
         {
-            if (boardRepository == null)
+            if (roleRepository == null)
             {
-                boardRepository = new BoardRepository();
+                roleRepository = new RoleRepository();
             }
-            return boardRepository;
+            return roleRepository;
         }
 
         public ContactsRepository GetContactRepository()
@@ -100,6 +102,15 @@ namespace DataAccessLayer
             }
             return pictureRepository;
 
+        }
+
+        public PlayerRepository GetPlayerRepository()
+        {
+            if (playerRepository == null)
+            {
+                playerRepository = new PlayerRepository();
+            }
+            return playerRepository;
         }
     }
 }

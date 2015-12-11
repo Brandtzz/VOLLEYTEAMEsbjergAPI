@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 using DataAccessLayer.DomainModel;
 
 namespace DataAccessLayer.Repository
@@ -14,7 +15,7 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
 
-                List<DomainModelSponsor> sponsorList = context.Set<DomainModelSponsor>().ToList();
+                List<DomainModelSponsor> sponsorList = context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team).ToList();
                 return sponsorList;
             }
         }
@@ -25,7 +26,8 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
                 sponsor =
-                     context.Set<DomainModelSponsor>().Where(domainModelSponsor => domainModelSponsor.Id == Id).FirstOrDefault();
+                     context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team)
+                     .Where(domainModelSponsor => domainModelSponsor.Id == Id).Single();
             }
             return sponsor;
         }
@@ -44,7 +46,8 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
                 DomainModelSponsor sponsor =
-                    context.Set<DomainModelSponsor>().Where(domainModelSponsor => domainModelSponsor.Id == Id).FirstOrDefault();
+                    context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team)
+                    .Where(domainModelSponsor => domainModelSponsor.Id == Id).Single();
                 if (sponsor != null)
                 {
                     context.Set<DomainModelSponsor>().Remove(sponsor);
@@ -58,12 +61,14 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
                 DomainModelSponsor sponsor =
-                    context.Set<DomainModelSponsor>()
+                    context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team)
                         .Where(domainModelSponsor => domainModelSponsor.Id == entity.Id)
-                        .FirstOrDefault();
+                        .Single();
                 if (sponsor != null)
                 {
-                    sponsor.Sponsor= entity.Sponsor;
+                    sponsor.Url = entity.Url;
+                    sponsor.PictureId = entity.PictureId;
+                    sponsor.Name = entity.Name; 
                 }
                 context.SaveChanges();
                 return sponsor;

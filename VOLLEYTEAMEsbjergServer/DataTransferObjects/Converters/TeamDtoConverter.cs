@@ -14,7 +14,9 @@ namespace DataTransferObjects.Converters
             var dto = new TeamDto()
             {
                 Id = domainModelTeam.Id,
-                Team = domainModelTeam.Team
+                Name = domainModelTeam.Name,
+                Description = domainModelTeam.Description,
+                Intro = domainModelTeam.Intro
             };
             return dto;
         }

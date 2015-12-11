@@ -14,7 +14,11 @@ namespace DataTransferObjects.Converters
             var dto = new ContactsDto()
             {
                 Id = domainModelContacts.Id,
-                Contacts = domainModelContacts.Contacts
+                FirstName = domainModelContacts.FirstName,
+                LastName = domainModelContacts.LastName,
+                Email = domainModelContacts.Email,
+                Phone = domainModelContacts.Phone,
+                PictureId = domainModelContacts.PictureId
             };
             return dto;
         }

@@ -23,30 +23,32 @@ namespace DataAccessLayer.Context
                 About = "I dette felt kan du fortælle lidt om klubben, og om volleyball teamet."
             };
 
-            var board = new DomainModelBoard
-            {
-                Board = "Bestyrelsen består af: Judith, Kenneth, Tina og Per"
-            };
-
             var contacts = new DomainModelContacts
             {
-                Contacts = "Kontakt Judith for nærmere information på 99999999"
+                FirstName = "Judith ",
+                LastName = " Pølsemand",
+                Email = "volleyteamesbjerg@gmail.com",
+                Phone = "34657678",
+                PictureId = 1
             };
 
             var news = new DomainModelNews
             {
-                News = "Splid på 1 div dameholdet - STOP Mobning kampange igangsat - Senior Mixhold stadig ubesejret!"
+                News = "1 div dameholdet - Senior Mixhold stadig ubesejret!"
             };
 
             var sponsor = new DomainModelSponsor
             {
-                Sponsor =
-                    "Sponsorerne i år er: Skræddergården, Jyske Bank, Skjern Bank, Valse Møllen, Aarsland, Slagter Kaj Madsen"
+                Url = "www.google.dk",
+                PictureId = 2,
+                Name = "Google"
             };
 
             var team = new DomainModelTeam
             {
-                Team = "1 division senior damer, C-Række senior mixhold + DGI-rækken senior mixhold, Kids/teen volley"
+                Name = "1. division",
+                Description = "beskrivelse af 1. divsions",
+                Intro = "beskrivelse af 1. divsions tøser"
             };
 
             var tournament = new DomainModelTournament
@@ -62,6 +64,21 @@ namespace DataAccessLayer.Context
                 English = "Welcome to VOLLEYTEAMESBJERG........GOOGLE TRANSLATE FTW!!!!!!!"
             };
 
+            var role = new DomainModelRole
+            {
+                Role = "Formand"
+            };
+
+            var player = new DomainModelPlayer
+            {
+                FirstName = "Lars",
+                LastName = "Frede",
+                Address = " Jyllandsgade 55",
+                Phone = "",
+                TeamId = 0
+
+            };
+
             //Bitmap bitmapLogo = new Bitmap(Resources.logo);
 
             //var picture = new DomainModelPicture
@@ -71,7 +88,6 @@ namespace DataAccessLayer.Context
             //};
 
             context.About.Add(about);
-            context.Board.Add(board);
             context.Contacts.Add(contacts);
             context.News.Add(news);
             context.Sponsor.Add(sponsor);
@@ -79,6 +95,8 @@ namespace DataAccessLayer.Context
             context.Tournament.Add(tournament);
             context.English.Add(english);
             //context.Picture.Add(picture);
+            context.Role.Add(role);
+            context.Player.Add(player);
             base.Seed(context);
         }
     }

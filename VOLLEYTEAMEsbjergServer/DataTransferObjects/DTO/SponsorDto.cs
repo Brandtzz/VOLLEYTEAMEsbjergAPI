@@ -10,6 +10,12 @@ namespace DataTransferObjects.Converters
     {
         public int Id { get; set; }
 
-        public string Sponsor { get; set; }
+        public string Url { get; set; }
+
+        public int TeamId { get; set; }
+
+        public int PictureId { get; set; }
+
+        public string Name { get; set; }
     }
 }

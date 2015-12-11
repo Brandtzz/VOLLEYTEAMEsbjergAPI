@@ -14,7 +14,9 @@ namespace DataTransferObjects.Converters
             var dto = new SponsorDto()
             {
                 Id = domainModelSponsor.Id,
-                Sponsor = domainModelSponsor.Sponsor
+                Url = domainModelSponsor.Url,
+                PictureId = domainModelSponsor.PictureId,
+                Name = domainModelSponsor.Name
             };
             return dto;
         }
