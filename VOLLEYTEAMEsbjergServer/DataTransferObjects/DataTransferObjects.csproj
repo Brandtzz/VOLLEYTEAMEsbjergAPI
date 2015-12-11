@@ -45,12 +45,9 @@
     <Compile Include="Converters\ContactsDtoConverter.cs" />
     <Compile Include="Converters\EnglishDtoConverter.cs" />
     <Compile Include="Converters\NewsDtoConverter.cs" />
-<<<<<<< HEAD
     <Compile Include="Converters\PlayerDtoConverter.cs" />
     <Compile Include="Converters\RoleDtoConverter.cs" />
-=======
     <Compile Include="Converters\PictureDtoConverter.cs" />
->>>>>>> b4acc99319debd48c756b6765e14ed2e0a4dd30f
     <Compile Include="Converters\SponsorDtoConverter.cs" />
     <Compile Include="Converters\TeamDtoConverter.cs" />
     <Compile Include="Converters\TournamentDtoConverter.cs" />
@@ -58,12 +55,9 @@
     <Compile Include="DTO\ContactsDto.cs" />
     <Compile Include="DTO\EnglishDto.cs" />
     <Compile Include="DTO\NewsDto.cs" />
-<<<<<<< HEAD
     <Compile Include="DTO\PlayerDto.cs" />
     <Compile Include="DTO\RoleDto.cs" />
-=======
     <Compile Include="DTO\PictureDto.cs" />
->>>>>>> b4acc99319debd48c756b6765e14ed2e0a4dd30f
     <Compile Include="DTO\SponsorDto.cs" />
     <Compile Include="DTO\TeamDto.cs" />
     <Compile Include="DTO\TournamentDto.cs" />

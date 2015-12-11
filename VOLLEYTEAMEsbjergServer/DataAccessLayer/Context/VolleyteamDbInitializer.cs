@@ -33,11 +33,8 @@ namespace DataAccessLayer.Context
 
             var news = new DomainModelNews
             {
-<<<<<<< HEAD
-                News = "1 div dameholdet - Senior Mixhold stadig ubesejret!"
-=======
+
                 News = "Senior Mixhold stadig ubesejret!"
->>>>>>> b4acc99319debd48c756b6765e14ed2e0a4dd30f
             };
 
             var sponsor = new DomainModelSponsor
@@ -73,7 +70,6 @@ namespace DataAccessLayer.Context
                 English = "Welcome to VOLLEYTEAMESBJERG........GOOGLE TRANSLATE FTW!!!!!!!"
             };
 
-<<<<<<< HEAD
             var role = new DomainModelRole
             {
                 Role = "Formand"
@@ -89,16 +85,7 @@ namespace DataAccessLayer.Context
 
             };
 
-            //Bitmap bitmapLogo = new Bitmap(Resources.logo);
 
-            //var picture = new DomainModelPicture
-            //{
-            //    PictureName = "VOLLEYTEAM Esbjerg Logo",
-            //    Picture = bitmapLogo
-            //};
-
-=======
->>>>>>> b4acc99319debd48c756b6765e14ed2e0a4dd30f
             context.About.Add(about);
             context.Contacts.Add(contacts);
             context.News.Add(news);
@@ -106,13 +93,9 @@ namespace DataAccessLayer.Context
             context.Team.Add(team);
             context.Tournament.Add(tournament);
             context.English.Add(english);
-<<<<<<< HEAD
-            //context.Picture.Add(picture);
             context.Role.Add(role);
             context.Player.Add(player);
-=======
             context.Picture.Add(picture);
->>>>>>> b4acc99319debd48c756b6765e14ed2e0a4dd30f
             base.Seed(context);
         }
     }
