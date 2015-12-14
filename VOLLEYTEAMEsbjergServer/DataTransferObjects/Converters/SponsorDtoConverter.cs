@@ -15,7 +15,7 @@ namespace DataTransferObjects.Converters
             {
                 Id = domainModelSponsor.Id,
                 Url = domainModelSponsor.Url,
-                PictureId = domainModelSponsor.PictureId,
+                
                 Name = domainModelSponsor.Name
             };
             return dto;
