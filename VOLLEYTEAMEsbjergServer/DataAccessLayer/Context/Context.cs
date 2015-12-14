@@ -35,6 +35,8 @@ namespace DataAccessLayer.Context
             sponsorConfig.Property(domainModelSponsor => domainModelSponsor.Url).IsOptional();
             sponsorConfig.HasMany(domainModelSponsor => domainModelSponsor.Team).WithMany(domainModelTeam => domainModelTeam.Sponsor)
                 .Map(teamSponsor => { teamSponsor.MapLeftKey("SponsorID"); teamSponsor.MapRightKey("TeamID"); teamSponsor.ToTable("TeamSponsor"); });
+            sponsorConfig.HasOptional(domainModelSponsor => domainModelSponsor.Picture)
+                .WithRequired(domainModelPicture => domainModelPicture.SponsorId);
             sponsorConfig.ToTable("Sponsor");
 
             var tournamentConfig = modelbuilder.Entity<DomainModelTournament>();
@@ -55,6 +57,8 @@ namespace DataAccessLayer.Context
                 .Map(teamContacts => { teamContacts.MapLeftKey("ContactsId"); teamContacts.MapRightKey("TeamId"); teamContacts.ToTable("TeamContacts"); });
             contactsConfig.HasMany(domainModelContacts => domainModelContacts.Role).WithMany(domainModelPosition => domainModelPosition.Contacts)
                 .Map(contactsPosition => { contactsPosition.MapLeftKey("ContactsId"); contactsPosition.MapRightKey("RoleId"); contactsPosition.ToTable("ContactsPosition"); });
+            contactsConfig.HasOptional(domainModelContacts => domainModelContacts.Picture)
+                .WithRequired(domainModelpicture => domainModelpicture.ContactId);
             contactsConfig.ToTable("Contacts");
 
             var pictureConfig = modelbuilder.Entity<DomainModelPicture>();

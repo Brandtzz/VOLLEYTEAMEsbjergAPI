@@ -12,10 +12,10 @@ namespace DataAccessLayer.DomainModel
 
         public string Url { get; set; }
 
-        public int PictureId { get; set; }
-
+     
         public string Name { get; set; }
 
         public List<DomainModelTeam> Team { get; set; }
+        public  DomainModelPicture Picture { get; set; }
     }
 }

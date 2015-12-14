@@ -16,7 +16,7 @@ namespace DataAccessLayer.Repository
             {
 
                 List<DomainModelContacts> boardList = context.Set<DomainModelContacts>()
-                    .Include(domainModelContacts => domainModelContacts.Team).Include(domainModelContacts => domainModelContacts.Role).ToList();
+                    .Include(domainModelContacts => domainModelContacts.Team).Include(domainModelContacts => domainModelContacts.Role).Include(DomainModelContacts => DomainModelContacts.Picture).ToList();
                 return boardList;
             }
         }
@@ -28,7 +28,7 @@ namespace DataAccessLayer.Repository
             {
                 contacts =
                      context.Set<DomainModelContacts>()
-                     .Include(DomainModelContacts => DomainModelContacts.Team).Include(domainModelContacts => domainModelContacts.Role)
+                     .Include(domainModelContacts => domainModelContacts.Team).Include(domainModelContacts => domainModelContacts.Role).Include(domainModelContact => domainModelContact.Picture)
                      .Where(domainModelContacts => domainModelContacts.Id == Id).Single();
             }
             return contacts;
@@ -49,8 +49,8 @@ namespace DataAccessLayer.Repository
             {
                 DomainModelContacts contacts =
                     context.Set<DomainModelContacts>()
-                    .Include(domainModelContacts => domainModelContacts.Team).Where(domainModelContacts => domainModelContacts.Id == Id)
-                    .Include(domainModelContacts => domainModelContacts.Role).Single();
+                    .Include(domainModelContacts => domainModelContacts.Team).Include(domianModelContact=> domianModelContact.Picture)
+                    .Include(domainModelContacts => domainModelContacts.Role).Where(domainModelContacts => domainModelContacts.Id == Id).Single();
                 if (contacts != null)
                 {
                     context.Set<DomainModelContacts>().Remove(contacts);
@@ -65,7 +65,7 @@ namespace DataAccessLayer.Repository
             {
                 DomainModelContacts contacts =
                     context.Set<DomainModelContacts>().Include(domainModelContacts => domainModelContacts.Team)
-                        .Include(domainModelContacts => domainModelContacts.Role)
+                        .Include(domainModelContacts => domainModelContacts.Role).Include(domainModelContacts => domainModelContacts.Picture)
                         .Where(domainModelContacts => domainModelContacts.Id == entity.Id)
                         .Single();
 
@@ -75,7 +75,7 @@ namespace DataAccessLayer.Repository
                     contacts.LastName = entity.LastName;
                     contacts.Email = entity.Email;
                     contacts.Phone = entity.Phone;
-                    contacts.PictureId = entity.PictureId;
+                    
                 }
                 context.SaveChanges();
                 return contacts;
