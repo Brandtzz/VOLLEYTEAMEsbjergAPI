@@ -18,11 +18,13 @@ namespace DataAccessLayer.DomainModel
 
         public string Phone { get; set; }
 
-        public int PictureId { get; set; }
+       
 
         public List<DomainModelTeam> Team { get; set; }
 
         public List<DomainModelRole> Role { get; set; }
+        public DomainModelPicture Picture { get; set; }
+
 
 
     }

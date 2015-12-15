@@ -18,7 +18,7 @@ namespace DataTransferObjects.Converters
                 LastName = domainModelContacts.LastName,
                 Email = domainModelContacts.Email,
                 Phone = domainModelContacts.Phone,
-                PictureId = domainModelContacts.PictureId
+             
             };
             return dto;
         }

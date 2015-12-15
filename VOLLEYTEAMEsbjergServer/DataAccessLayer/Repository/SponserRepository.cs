@@ -15,7 +15,7 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
 
-                List<DomainModelSponsor> sponsorList = context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team).ToList();
+                List<DomainModelSponsor> sponsorList = context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team).Include(domainModelSponsor => domainModelSponsor.Picture).ToList();
                 return sponsorList;
             }
         }
@@ -26,7 +26,7 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
                 sponsor =
-                     context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team)
+                     context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team).Include(domainModelSponser => domainModelSponser.Picture)
                      .Where(domainModelSponsor => domainModelSponsor.Id == Id).Single();
             }
             return sponsor;
@@ -46,7 +46,7 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
                 DomainModelSponsor sponsor =
-                    context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team)
+                    context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team).Include(domainModelSponsor => domainModelSponsor.Picture)
                     .Where(domainModelSponsor => domainModelSponsor.Id == Id).Single();
                 if (sponsor != null)
                 {
@@ -61,13 +61,13 @@ namespace DataAccessLayer.Repository
             using (var context = new Context.Context())
             {
                 DomainModelSponsor sponsor =
-                    context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team)
+                    context.Set<DomainModelSponsor>().Include(domainModelSponsor => domainModelSponsor.Team).Include(domainModelSponsor => domainModelSponsor.Picture)
                         .Where(domainModelSponsor => domainModelSponsor.Id == entity.Id)
                         .Single();
                 if (sponsor != null)
                 {
                     sponsor.Url = entity.Url;
-                    sponsor.PictureId = entity.PictureId;
+               
                     sponsor.Name = entity.Name; 
                 }
                 context.SaveChanges();

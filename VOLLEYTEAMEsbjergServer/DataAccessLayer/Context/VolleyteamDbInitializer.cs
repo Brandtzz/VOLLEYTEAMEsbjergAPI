@@ -28,7 +28,7 @@ namespace DataAccessLayer.Context
                 LastName = " Pølsemand",
                 Email = "volleyteamesbjerg@gmail.com",
                 Phone = "34657678",
-                PictureId = 1
+             
             };
 
             var news = new DomainModelNews
@@ -40,7 +40,7 @@ namespace DataAccessLayer.Context
             var sponsor = new DomainModelSponsor
             {
                 Url = "www.google.dk",
-                PictureId = 2,
+            
                 Name = "Google"
             };
 

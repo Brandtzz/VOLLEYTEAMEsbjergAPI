@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransferObjects", "Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rest_Api", "Rest_Api\Rest_Api.csproj", "{B8DCEBE5-5C38-4D6E-83E4-0CFBFF93CC80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{45EDD12E-07F6-424F-B1F3-C7B85D5DAD5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessLogicLayer_Test", "BuisnessLogicLayer_Test\BuisnessLogicLayer_Test.csproj", "{7D38C886-C6A8-41A7-B33D-2EE35B9D3454}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{B8DCEBE5-5C38-4D6E-83E4-0CFBFF93CC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8DCEBE5-5C38-4D6E-83E4-0CFBFF93CC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8DCEBE5-5C38-4D6E-83E4-0CFBFF93CC80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45EDD12E-07F6-424F-B1F3-C7B85D5DAD5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45EDD12E-07F6-424F-B1F3-C7B85D5DAD5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45EDD12E-07F6-424F-B1F3-C7B85D5DAD5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45EDD12E-07F6-424F-B1F3-C7B85D5DAD5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D38C886-C6A8-41A7-B33D-2EE35B9D3454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D38C886-C6A8-41A7-B33D-2EE35B9D3454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D38C886-C6A8-41A7-B33D-2EE35B9D3454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D38C886-C6A8-41A7-B33D-2EE35B9D3454}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

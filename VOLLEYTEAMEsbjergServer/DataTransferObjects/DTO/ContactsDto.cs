@@ -18,7 +18,7 @@ namespace DataTransferObjects.Converters
 
         public string Phone { get; set; }
 
-        public int PictureId { get; set; }
+       
 
     }
 }

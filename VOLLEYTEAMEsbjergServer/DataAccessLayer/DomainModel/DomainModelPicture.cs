@@ -16,5 +16,8 @@ namespace DataAccessLayer.DomainModel
         public int Id { get; set; }
         public byte[] Picture { get; set; }
         public string PictureName { get; set; }
+
+        public DomainModelSponsor SponsorId { get; set; }
+        public DomainModelContacts ContactId { get; set; }
     }
 }

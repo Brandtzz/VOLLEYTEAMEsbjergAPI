@@ -14,8 +14,7 @@ namespace DataTransferObjects.Converters
 
         public int TeamId { get; set; }
 
-        public int PictureId { get; set; }
-
+        
         public string Name { get; set; }
     }
 }
