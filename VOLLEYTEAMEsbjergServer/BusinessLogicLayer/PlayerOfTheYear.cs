@@ -22,6 +22,21 @@ namespace BusinessLogicLayer
                     playerOfTheYearScore = currentScore;
                     playerOfTheYear = player;
                 }
+                else if (currentScore == playerOfTheYearScore)
+                {
+                    if (playerOfTheYear.PlayerOfTheMatch < player.PlayerOfTheMatch)
+                    {
+                        playerOfTheYear = player;
+                    }
+                    else if (playerOfTheYear.PlayerOfTheMatch == player.PlayerOfTheMatch)
+                    {
+                        if (playerOfTheYear.Training < player.Training)
+                        {
+                            playerOfTheYear = player;
+                        }
+                    }
+                   
+                }
             }
 
             return playerOfTheYear;

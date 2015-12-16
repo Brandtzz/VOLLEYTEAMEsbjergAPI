@@ -22,19 +22,5 @@ namespace DataAccessLayer.Helpers
                 return memoryStream.ToArray();
             }
         }
-
-        public static Bitmap GetImageFromByteArray(byte[] byteArray)
-        {
-            Bitmap bm = GetImageFromByteArray(File.ReadAllBytes(byteArray.ToString()));
-
-            if (bm != null && (bm.HorizontalResolution != (int)bm.HorizontalResolution ||
-                               bm.VerticalResolution != (int)bm.VerticalResolution))
-            {
-                bm.SetResolution((int)(bm.HorizontalResolution + 0.5f),
-                                 (int)(bm.VerticalResolution + 0.5f));
-            }
-
-            return bm;
-        }
     }
 }
