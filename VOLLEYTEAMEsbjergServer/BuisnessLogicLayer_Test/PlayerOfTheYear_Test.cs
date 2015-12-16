@@ -58,18 +58,19 @@ namespace BuisnessLogicLayer_Test
                 PlayerOfTheMatch = 0,
                 Training = 5,
                 TeamId = 1
-                
+
             };
             players.Add(player1);
             players.Add(player2);
             players.Add(player3);
             var winner = playerOfTheYear.PlayerOfTheYearCalculator(players);
-            Assert.AreEqual(player2,winner);
+            Assert.AreEqual(player2, winner);
 
 
 
-         
+
         }
+
         [Test]
         public void CheckPlayerOfTheYearMoreWinners()
         {
@@ -121,6 +122,7 @@ namespace BuisnessLogicLayer_Test
             var winner = playerOfTheYear.PlayerOfTheYearCalculator(players);
             Assert.AreEqual(player3, winner);
         }
+
         [Test]
         public void CheckPlayerOfTheYearMoreWinnersSameAmountOfPlayerOfTheMatch()
         {
