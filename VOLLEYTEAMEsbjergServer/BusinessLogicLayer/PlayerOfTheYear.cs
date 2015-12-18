@@ -34,13 +34,26 @@ namespace BusinessLogicLayer
                         {
                             playerOfTheYear = player;
                         }
-                        
+                        else if (playerOfTheYear.Training == player.Training)
+                        {
+                           
+                            if (GetRandomNumber() == 1)
+                            {
+                                playerOfTheYear = player;
+                            }
+                        }
+
                     }
-                   
+
                 }
             }
 
             return playerOfTheYear;
+        }
+
+        public virtual int GetRandomNumber()
+        {
+            return new Random().Next(0, 2);
         }
     }
 }
